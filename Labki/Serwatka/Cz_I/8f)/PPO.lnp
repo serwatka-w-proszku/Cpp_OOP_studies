@@ -1,0 +1,12 @@
+--cpu ARM7TDMI
+".\startup.o"
+".\main.o"
+".\stepper.o"
+".\led.o"
+".\keyboard.o"
+".\ledinv.o"
+".\ledpos.o"
+--strict --scatter ".\PPO.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\PPO.map" -o .\PPO.axf

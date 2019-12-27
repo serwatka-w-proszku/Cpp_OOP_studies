@@ -1,0 +1,22 @@
+#ifndef KEYBOARD_TS_H
+#define KEYBOARD_TS_H
+
+#include "LCD_DISCO_F429ZI.h"
+#include "TS_DISCO_F429ZI.h"
+
+enum ButtonPressed{RELEASED, BUTTON_0, BUTTON_1, BUTTON_2, BUTTON_3};
+
+class KeyboardTs{
+    private:
+        TS_DISCO_F429ZI ts;
+        TS_StateTypeDef TS_State;
+    protected:
+        LCD_DISCO_F429ZI MyLCD;
+        void SetRect(unsigned int, unsigned int);
+        void SetText(unsigned int, unsigned int, char*);
+    public:
+        enum ButtonPressed eRead(void); 
+        KeyboardTs(void);
+};
+
+#endif

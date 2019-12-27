@@ -1,0 +1,16 @@
+Dependencies for Project 'PPO', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x56F15D4E)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 513"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.cpp)(0x56FD8232)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (stepper.h)(0x57000A11)
+I (led.h)(0x56FC0D26)
+I (keyboard.h)(0x56FAB4E8)
+F (.\stepper.cpp)(0x56FD820B)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\stepper.o --omf_browse .\stepper.crf --depend .\stepper.d)
+I (stepper.h)(0x57000A11)
+I (led.h)(0x56FC0D26)
+F (.\stepper.h)(0x57000A11)()
+F (.\led.cpp)(0x5702422F)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (led.h)(0x56FC0D26)
+F (.\keyboard.cpp)(0x56FC0F0A)(--cpp -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="513"-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (E:\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x53202B46)
+I (keyboard.h)(0x56FAB4E8)
