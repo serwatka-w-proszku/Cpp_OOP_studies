@@ -1,0 +1,54 @@
+#include "Keyboard_Ts.h"
+
+void KeyboardTs::SetRect(unsigned int uiX_Pos, unsigned int uiY_Pos){
+    MyLCD.SetTextColor(LCD_COLOR_BLUE);  
+    MyLCD.FillRect(uiX_Pos,uiY_Pos,80,80);
+    MyLCD.SetTextColor(LCD_COLOR_GREEN);
+    MyLCD.DrawRect(uiX_Pos,uiY_Pos,80,80);
+}
+
+void KeyboardTs::SetText(unsigned int uiX_Pos, unsigned int uiY_Pos, char* cString){
+    MyLCD.SetFont(&Font24);
+    MyLCD.SetBackColor(LCD_COLOR_RED);
+    MyLCD.SetTextColor(LCD_COLOR_WHITE);
+    MyLCD.DisplayStringAt(uiX_Pos, uiY_Pos, (uint8_t *)cString, LEFT_MODE);    
+}
+
+KeyboardTs::KeyboardTs(void){
+    ts.Init(240, 320);
+    MyLCD.Clear(LCD_COLOR_BLACK);
+    SetRect(0,0);
+    SetText(0, 0, "0"); 
+    SetRect(0, 80);
+    SetText(0, 80, "1"); 
+    SetRect(0, 160);
+    SetText(0, 160, "2");     
+    SetRect(0, 240);
+    SetText(0, 240, "3");                
+}
+
+enum ButtonPressed KeyboardTs::eRead(void){
+        unsigned int x, y;
+        ts.GetState(&TS_State); 
+        if(TS_State.TouchDetected){
+            x = TS_State.X;
+            y = TS_State.Y;
+            if(x>0&&x<80&&y>0&&y<80){
+                return BUTTON_0;        
+            }
+            else if(x>0&&x<80&&y>80&&y<160){
+                return BUTTON_1; 
+            }
+            else if(x>0&&x<80&&y>160&&y<240){
+                return BUTTON_2; 
+            }
+            else if(x>0&&x<80&&y>240&&y<300){
+                return BUTTON_3;
+            }
+            else{
+            }
+        }
+        else{
+            return RELEASED;
+        }
+}
